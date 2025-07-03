@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/components/customListTile.dart';
 import 'package:news_app/models/article_model.dart';
-import 'package:news_app/pages/business_page.dart';
-import 'package:news_app/pages/headlines.dart';
-import 'package:news_app/pages/profile.dart';
+import 'package:news_app/pages/news_page.dart';
+import 'package:news_app/pages/settings.dart';
 import 'package:news_app/services/api_service.dart';
 
 class Homepage extends StatefulWidget {
@@ -17,9 +16,8 @@ class _HomepageState extends State<Homepage> {
   final ApiService client = ApiService();
 
   final List _pages = [
-    business_page(),
-    Headlines(),
-    profile(),
+    news_page(),
+    settings(),
 
   ];
   int _selectedIndex = 0;
@@ -51,9 +49,8 @@ class _HomepageState extends State<Homepage> {
 
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.business_center_outlined), label: "Business"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.newspaper_rounded), label: "Headlines"),
+              icon: Icon(Icons.newspaper_rounded), label: "Business"),
+
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
         ],
 

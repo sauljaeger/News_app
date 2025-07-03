@@ -7,7 +7,7 @@ class CustomListTile extends StatelessWidget {
 
   const CustomListTile({super.key, required this.article});
 
-  // Function to launch URL
+  // Function to launch URL hehehehe
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
@@ -59,7 +59,7 @@ class CustomListTile extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: Colors.red,
+              color: Colors.blueAccent,
               borderRadius: BorderRadius.circular(30),
             ),
             child: Text(
